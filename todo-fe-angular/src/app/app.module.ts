@@ -14,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
+import { HttpIntercepterBasicAuthServiceService } from './service/http/http-intercepter-basic-auth-service.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { TodoComponent } from './todo/todo.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:HttpIntercepterBasicAuthServiceService,multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

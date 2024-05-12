@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 import { Router } from '@angular/router';
+import { BasicAuthenticationService } from '../service/basic-authentication.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public hardcodedAuthenticationService : HardcodedAuthenticationService, public router:Router) { }
+  constructor(public basicAuthenticationService : BasicAuthenticationService, public router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
 
   titleClick(){
 
-    if(this.hardcodedAuthenticationService.isUserLoggedIn())
+    if(this.basicAuthenticationService.isUserLoggedIn())
       {
         this.router.navigate(['welcome',sessionStorage.getItem('authenticaterUser')])
       }

@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+// import { TestBed } from '@angular/core/testing';
 
-import { HardcodedAuthenticationService } from './hardcoded-authentication.service';
+// import { HardcodedAuthenticationService } from './hardcoded-authentication.service';
 
-describe('HardcodedAuthenticationService', () => {
-  let service: HardcodedAuthenticationService;
+// describe('HardcodedAuthenticationService', () => {
+//   let service: HardcodedAuthenticationService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(HardcodedAuthenticationService);
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//     service = TestBed.inject(HardcodedAuthenticationService);
+//   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(service).toBeTruthy();
+//   });
+// });
